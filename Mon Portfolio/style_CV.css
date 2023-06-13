@@ -87,7 +87,7 @@ section > div {
 
 .photo img {
     width: 150px;
-    height: 130px;
+    height: auto;
     border-radius: 100%;
     margin-top: -80px;
 }
@@ -212,27 +212,27 @@ section > div {
 
 .c80 {
     width: 80%;
-    background-color: #0c74bc;
+    background-color: #000000;
 }
 
 .c85 {
     width: 85%;
-    background-color: #0c74bc;
+    background-color: #000000;
 }
 
 .c90 {
     width: 90%;
-    background-color: #0c74bc;
+    background-color: #000000;
 }
 
 .c95 {
     width: 95%;
-    background-color: #0c74bc;
+    background-color: #000000;
 }
 
 .c100 {
     width: 100%;
-    background-color: #0c74bc;
+    background-color: #000000;
     border-radius: 5px;
 }
 
@@ -247,7 +247,7 @@ section > div {
     height: 0.5em;
     margin-bottom: 0.25em;
     border-radius: 10px;
-    background-color: rgb(255, 255, 255);
+    background-color: grey;
 }
 
 /* SECTION INTERETS */
@@ -368,8 +368,17 @@ table {
     font-weight: bold;
   }
   
-  /* Couleurs pour les niveaux de maîtrise */
-  td:nth-child(2) {
-    font-weight: bold;
-    color: #008000; /* Couleur pour le niveau "Avancé" */
-  }
+.advanced {
+    color: #2ecc71; /* Vert */
+}
+  
+.intermediate {
+    color: #b5f10f; /* Jaune */
+}
+
+.beginner {
+    color: #f1c40f; /* Jaune */
+}
+
+
+  

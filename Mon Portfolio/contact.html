@@ -1,4 +1,4 @@
-<html lang="fr">
+<!DOCTYPE html lang="fr">
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -14,7 +14,7 @@
                 color: green;
             }
         </style>
-        <script> <!-- Script JavaScript -->
+        <script> // Script JavaScript
             function envoyerFormulaire(event) {
                 event.preventDefault(); // Empêche le formulaire de se soumettre
 
@@ -32,36 +32,43 @@
                 // Réinitialiser les valeurs du formulaire
                 document.monformulaire.reset();
             }
+            
         </script>
+         <script>
+            function autreOption(selectElement) {
+                const autreOptionElement = document.getElementById("autreOption");
+                if (selectElement.value === "Autre") {
+                    autreOptionElement.style.display = "block";
+                } else {
+                    autreOptionElement.style.display = "none";
+                }
+            }
+        </script>
+        
 	</head>
 	<body>
 		<nav>
 			<div class="profile">
-				<img src="Issa.png" alt="profile photo" />
-				<h1>Issa KANE</h1>
-                <img src="jean.png" alt="profile photo" />
-                <h1>Jean Loubissa</h1>
+				<img src="Issa.png" alt="profile photo" /> <!-- Image de profil d'Issa -->
+				<h1>Issa KANE</h1> <!-- Nom d'Issa -->
 			</div>
 			<ul>
-				<li><a href="index.html">A propos de nous</a></li>
-				<li><a href="CV_Issa.html">CV de Issa</a></li>
-				<li><a href="CV_Jean.html">CV de Jean</a></li>
-				<li><a href="contact.html">Contactez-nous</a></li>
+				<li><a href="index.html">A propos de moi</a></li> <!-- Lien vers la page "A propos de nous" -->
+				<li><a href="CV_Issa.html">Curriculum Vitæ</a></li> <!-- Lien vers le CV d'Issa -->
+				<li><a href="contact.html">Contactez-moi</a></li> <!-- Lien vers la page "Contactez-nous" -->
 			</ul>
 			
 		</nav>
 
         <header>
-            <h1>Nous contacter !</h1> <!-- Titre de la section d'en-tête -->
+            <h1>Me contacter !</h1> <!-- Titre de la section d'en-tête -->
         </header>
 
         <section>
             <div class="photo">
-                <a href="index.html">
-                    <img src="IssaJean.png" alt="Notre photo de profil" />
-                </a>
+                <img src="profile-pic.png" alt="Ma photo de profil">
             </div>
-            <form name="monformulaire" onsubmit="envoyerFormulaire(event)"> <!-- Formulaire avec nom et fonction appelant notre fonction JavaScript -->
+            <form name="monformulaire" onsubmit="envoyerFormulaire(event)">
                 <ul class="form-style-1">
                     <li>
                         <label>Votre Nom <span class="required">*</span></label>
@@ -74,11 +81,16 @@
                     </li>
                     <li>
                         <label>Sujet</label>
-                        <select name="field4" class="field-select">
-                            <option value="Advertise">Prestation en IA</option>
-                            <option value="Partnership">Développement de Site Web</option>
+                        <select name="field4" class="field-select" onchange="autreOption(this)">
+                            <option value="Advertise">Offre d'alternance</option>
+                            <option value="Partnership">Partenariat</option>
                             <option value="General Question">Proposition</option>
+                            <option value="Autre">Autre</option> <!-- Option "Autre" ajoutée -->
                         </select>
+                    </li>
+                    <li id="autreOption" style="display: none;">
+                        <label>Veuillez préciser</label>
+                        <input type="text" name="field4-autre" class="field-long" />
                     </li>
                     <li>
                         <label>Votre message <span class="required">*</span></label>
@@ -90,28 +102,32 @@
                 </ul>
             </form>
         </section>
+        
 
         <section id="reponse"></section> <!-- Section pour afficher la réponse du formulaire -->
 
         <footer>
 			<div class="colonne">
-				<h3>Nos services</h3>
-				<p>Développement de projet IA</p>
-				<p>Prestation en IA</p>
-				<p>Développement de site Web</p>
+				<h3>Informations de contact</h3>
+				<p>Email : Issa.kane@efrei.net</p>
+				<p>Téléphone : +33 06 52 52 72 14</p>
+				<p>Adresse : Sucy-en-brie, Val de marne</p>
 			</div>
 			<div class="colonne">
-				<h3> Autres pages</h3>
-				<p><a href="index.html">A propos de nous</a></p>
-				<p><a href="CV_Issa.html">CV de Issa</a></p>
-				<p><a href="CV_Jean.html">CV de Jean</a></p>
-				<p><a href="contact.html">Contactez-nous</a></p>
+				<h3>Autres pages</h3>
+				<p><a href="index.html">A propos de moi</a></p>
+				<p><a href="CV_Issa.html">Mon CV</a></p>
 			</div>
 			<div class="colonne">
-				<h3>Nos adresses</h3>
-				<p><a href="Issa.kane@efrei.net">©Issa KANE</a></p>
-				<p><a href="Jean.loubissa@efrei.net">©Jean LOUBISSA</a></p>
+				<h3>Mes réseaux</h3>
+				<p><a href="https://www.linkedin.com/in/issa-kane"></a>
+					<img src="LinkedIn.png" alt="LinkedIn" />
+				</a></p>
+				<p><a href="https://www.github.com/issadevs">
+					<img src="GitHub.png" alt="GitHub" />
+				</a></p>
 			</div>
 		</footer>
+        <p class="footer-copyright">© 2023 Issa Kane. Tous droits réservés.</p>
 	</body>
 </html>

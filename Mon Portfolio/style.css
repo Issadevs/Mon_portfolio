@@ -123,7 +123,14 @@ nav ul li a {
   margin-right: 20px;
   max-width: 195px;
 }
-
+.page-content .projects-section .project:hover {
+  font-size: 20px;
+  color: #000;
+}
+.page-content .projects-section .project:hover .description {
+  font-size: 12px;
+  color: #000;
+}
 .page-content .projects-section .project h4 {
   margin: 0;
 }
@@ -142,7 +149,7 @@ footer {
   margin-top: 5%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly ;
   padding: 10px;
   background-color: #000;
   color: white;
@@ -170,7 +177,23 @@ footer .colonne h3 {
   color: #fff;
   font-family: 'Oswald', sans-serif;
   text-transform: uppercase;
+  text-align: center;
 }
+footer .colonne img {
+  width: 40px; /* Ajustez la largeur selon vos préférences */
+  height: auto; /* La hauteur sera automatiquement ajustée en fonction de la largeur */
+  margin-left: 25%;
+}
+.footer-copyright {
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #000000;
+  font-size: 14px;
+  color: #818181;
+}
+
+
 
 /* Responsive */
 @media screen and (max-width: 700px) {
